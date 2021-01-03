@@ -19,6 +19,8 @@ class AuthenticateInfoController extends AdminController
     protected function grid()
     {
         return Grid::make(new AuthenticateInfo(), function (Grid $grid) {
+            $grid->disableFilterButton();
+            $grid->showColumnSelector();
             $grid->column('id')->sortable();
             $grid->column('authenticate_name')->sortable();
             $grid->column('authenticate_path')->image();

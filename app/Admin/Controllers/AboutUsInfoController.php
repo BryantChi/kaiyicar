@@ -19,6 +19,8 @@ class AboutUsInfoController extends AdminController
     protected function grid()
     {
         return Grid::make(new AboutUsInfo(), function (Grid $grid) {
+            $grid->disableFilterButton();
+            $grid->showColumnSelector();
             // $grid->column('id')->sortable();
             $grid->column('content');
             $grid->column('created_at');

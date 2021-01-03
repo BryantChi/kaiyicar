@@ -2,13 +2,13 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\CarTypeInfo;
+use App\Admin\Repositories\FriendlinkInfo;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 
-class CarTypeInfoController extends AdminController
+class FriendlinkInfoController extends AdminController
 {
     /**
      * Make a grid builder.
@@ -17,12 +17,12 @@ class CarTypeInfoController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new CarTypeInfo(), function (Grid $grid) {
-            $grid->export();
+        return Grid::make(new FriendlinkInfo(), function (Grid $grid) {
             $grid->disableFilterButton();
             $grid->showColumnSelector();
             $grid->column('id')->sortable();
-            $grid->column('typeName');
+            $grid->column('linkName');
+            $grid->column('linkUrl')->link();
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -42,9 +42,10 @@ class CarTypeInfoController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new CarTypeInfo(), function (Show $show) {
+        return Show::make($id, new FriendlinkInfo(), function (Show $show) {
             $show->field('id');
-            $show->field('typeName');
+            $show->field('linkName');
+            $show->field('linkUrl');
             $show->field('created_at');
             $show->field('updated_at');
         });
@@ -57,9 +58,10 @@ class CarTypeInfoController extends AdminController
      */
     protected function form()
     {
-        return Form::make(new CarTypeInfo(), function (Form $form) {
+        return Form::make(new FriendlinkInfo(), function (Form $form) {
             $form->display('id');
-            $form->text('typeName');
+            $form->text('linkName')->required();
+            $form->url('linkUrl')->required();
 
             $form->display('created_at');
             $form->display('updated_at');

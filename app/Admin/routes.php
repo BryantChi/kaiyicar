@@ -14,11 +14,17 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    $router->get('api/getCarType', 'Api\\ApiController@getCarType');
+    $router->get('api/getCarModel', 'Api\\ApiController@getCarModel');
+
     $router->resource('AboutUs', 'AboutUsInfoController');
     $router->resource('Authenticate', 'AuthenticateInfoController');
     $router->resource('CatalogCar', 'CatalogCarInfoController');
     $router->resource('CarType', 'CarTypeInfoController');
     $router->resource('CarModel', 'CarModelInfoController');
     $router->resource('CarOptional', 'CarOptionalInfoController');
+    $router->resource('Friendlink', 'FriendlinkInfoController');
+    $router->resource('News', 'NewsInfoController');
+    $router->resource('Lore', 'CarLoreInfoController');
 
 });

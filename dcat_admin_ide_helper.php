@@ -49,6 +49,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection carFrontCover
      * @property Grid\Column|Collection carType
      * @property Grid\Column|Collection carModel
+     * @property Grid\Column|Collection optionalType
      * @property Grid\Column|Collection carOptionals
      * @property Grid\Column|Collection carManufactureYear
      * @property Grid\Column|Collection price
@@ -59,12 +60,16 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection carFileUrl
      * @property Grid\Column|Collection carDiscription
      * @property Grid\Column|Collection email_verified_at
+     * @property Grid\Column|Collection subject
      * @property Grid\Column|Collection content
+     * @property Grid\Column|Collection category
      * @property Grid\Column|Collection type
      * @property Grid\Column|Collection version
      * @property Grid\Column|Collection detail
      * @property Grid\Column|Collection is_enabled
      * @property Grid\Column|Collection user_id
+     * @property Grid\Column|Collection linkName
+     * @property Grid\Column|Collection linkUrl
      *
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection carTypeId(string $label = null)
@@ -104,6 +109,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection carFrontCover(string $label = null)
      * @method Grid\Column|Collection carType(string $label = null)
      * @method Grid\Column|Collection carModel(string $label = null)
+     * @method Grid\Column|Collection optionalType(string $label = null)
      * @method Grid\Column|Collection carOptionals(string $label = null)
      * @method Grid\Column|Collection carManufactureYear(string $label = null)
      * @method Grid\Column|Collection price(string $label = null)
@@ -114,12 +120,16 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection carFileUrl(string $label = null)
      * @method Grid\Column|Collection carDiscription(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
+     * @method Grid\Column|Collection subject(string $label = null)
      * @method Grid\Column|Collection content(string $label = null)
+     * @method Grid\Column|Collection category(string $label = null)
      * @method Grid\Column|Collection type(string $label = null)
      * @method Grid\Column|Collection version(string $label = null)
      * @method Grid\Column|Collection detail(string $label = null)
      * @method Grid\Column|Collection is_enabled(string $label = null)
      * @method Grid\Column|Collection user_id(string $label = null)
+     * @method Grid\Column|Collection linkName(string $label = null)
+     * @method Grid\Column|Collection linkUrl(string $label = null)
      */
     class Grid {}
 
@@ -164,6 +174,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection carFrontCover
      * @property Show\Field|Collection carType
      * @property Show\Field|Collection carModel
+     * @property Show\Field|Collection optionalType
      * @property Show\Field|Collection carOptionals
      * @property Show\Field|Collection carManufactureYear
      * @property Show\Field|Collection price
@@ -174,12 +185,16 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection carFileUrl
      * @property Show\Field|Collection carDiscription
      * @property Show\Field|Collection email_verified_at
+     * @property Show\Field|Collection subject
      * @property Show\Field|Collection content
+     * @property Show\Field|Collection category
      * @property Show\Field|Collection type
      * @property Show\Field|Collection version
      * @property Show\Field|Collection detail
      * @property Show\Field|Collection is_enabled
      * @property Show\Field|Collection user_id
+     * @property Show\Field|Collection linkName
+     * @property Show\Field|Collection linkUrl
      *
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection carTypeId(string $label = null)
@@ -219,6 +234,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection carFrontCover(string $label = null)
      * @method Show\Field|Collection carType(string $label = null)
      * @method Show\Field|Collection carModel(string $label = null)
+     * @method Show\Field|Collection optionalType(string $label = null)
      * @method Show\Field|Collection carOptionals(string $label = null)
      * @method Show\Field|Collection carManufactureYear(string $label = null)
      * @method Show\Field|Collection price(string $label = null)
@@ -229,12 +245,16 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection carFileUrl(string $label = null)
      * @method Show\Field|Collection carDiscription(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
+     * @method Show\Field|Collection subject(string $label = null)
      * @method Show\Field|Collection content(string $label = null)
+     * @method Show\Field|Collection category(string $label = null)
      * @method Show\Field|Collection type(string $label = null)
      * @method Show\Field|Collection version(string $label = null)
      * @method Show\Field|Collection detail(string $label = null)
      * @method Show\Field|Collection is_enabled(string $label = null)
      * @method Show\Field|Collection user_id(string $label = null)
+     * @method Show\Field|Collection linkName(string $label = null)
+     * @method Show\Field|Collection linkUrl(string $label = null)
      */
     class Show {}
 

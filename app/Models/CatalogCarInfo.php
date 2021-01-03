@@ -10,5 +10,10 @@ class CatalogCarInfo extends Model
 {
 	use HasDateTimeFormatter;
     protected $table = 'catalog_car_infos';
-    
+
+    protected $casts = [
+        'carOptionals' => 'json',
+        'carImageUrl' => 'json',
+    ];
+
 }

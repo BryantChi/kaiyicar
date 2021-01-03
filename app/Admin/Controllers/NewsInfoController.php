@@ -2,13 +2,13 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\CarTypeInfo;
+use App\Admin\Repositories\NewsInfo;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 
-class CarTypeInfoController extends AdminController
+class NewsInfoController extends AdminController
 {
     /**
      * Make a grid builder.
@@ -17,12 +17,13 @@ class CarTypeInfoController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new CarTypeInfo(), function (Grid $grid) {
-            $grid->export();
+        return Grid::make(new NewsInfo(), function (Grid $grid) {
             $grid->disableFilterButton();
             $grid->showColumnSelector();
             $grid->column('id')->sortable();
-            $grid->column('typeName');
+            $grid->column('title');
+            $grid->column('category');
+            $grid->column('content');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -42,9 +43,11 @@ class CarTypeInfoController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new CarTypeInfo(), function (Show $show) {
+        return Show::make($id, new NewsInfo(), function (Show $show) {
             $show->field('id');
-            $show->field('typeName');
+            $show->field('title');
+            $show->field('category');
+            $show->field('content');
             $show->field('created_at');
             $show->field('updated_at');
         });
@@ -57,9 +60,13 @@ class CarTypeInfoController extends AdminController
      */
     protected function form()
     {
-        return Form::make(new CarTypeInfo(), function (Form $form) {
+        return Form::make(new NewsInfo(), function (Form $form) {
             $form->display('id');
-            $form->text('typeName');
+            $form->text('title');
+            $form->text('category');
+            $form->editor('content')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
+            styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
+            table charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']]);
 
             $form->display('created_at');
             $form->display('updated_at');

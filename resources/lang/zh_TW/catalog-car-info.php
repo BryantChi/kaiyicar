@@ -9,6 +9,7 @@ return [
         'carFrontCover' => '封面',
         'carType' => '廠牌',
         'carModel' => '型號',
+        'optionalType' => '配備廠商',
         'carOptionals' => '配備',
         'carManufactureYear' => '年份',
         'price' => '價格',
