@@ -22,7 +22,9 @@ class AboutUsInfoController extends AdminController
             $grid->disableFilterButton();
             $grid->showColumnSelector();
             // $grid->column('id')->sortable();
-            $grid->column('content');
+            $grid->column('content')->display(function ($content) {
+                return "<p style=\"width:300px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;\">".str_replace("</p>", "",str_replace("<p>", "", $content))."</p>";
+            });
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -50,7 +52,7 @@ class AboutUsInfoController extends AdminController
     {
         return Show::make($id, new AboutUsInfo(), function (Show $show) {
             $show->field('id');
-            $show->field('content');
+            $show->field('content')->unescape();
             $show->field('created_at');
             $show->field('updated_at');
         });
@@ -65,7 +67,9 @@ class AboutUsInfoController extends AdminController
     {
         return Form::make(new AboutUsInfo(), function (Form $form) {
             $form->display('id');
-            $form->textarea('content');
+            $form->editor('content')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
+            styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
+            table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']])->imageDirectory('editor/images');;
 
             $form->display('created_at');
             $form->display('updated_at');

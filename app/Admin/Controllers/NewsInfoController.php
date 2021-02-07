@@ -63,10 +63,10 @@ class NewsInfoController extends AdminController
         return Form::make(new NewsInfo(), function (Form $form) {
             $form->display('id');
             $form->text('title');
-            $form->text('category');
+            $form->text('category')->default('未分類');
             $form->editor('content')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
             styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
-            table charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']]);
+            table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']]);
 
             $form->display('created_at');
             $form->display('updated_at');
