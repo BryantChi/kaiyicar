@@ -32,7 +32,7 @@
 
             <div class="row">
 
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide col-md-10 mx-auto" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @foreach ($catalogCarInfo->carImageUrl as $key => $item)
                             <li data-target="#carouselExampleIndicators" data-slide-to="0"
@@ -41,10 +41,9 @@
                     </ol>
                     <div class="carousel-inner">
                         @foreach ($catalogCarInfo->carImageUrl as $key => $item)
-                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}"
-                                style="align-items: center !important;">
+                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" style="background:rgba(75, 75, 75, 0.2);">
                                 <img src="{{ $item ? asset('uploads/' . $item) : '' }}"
-                                    class="img-fluid img-thumbnail d-block" style="max-height: 40rem !important;" alt="">
+                                    class="img-fluid img-thumbnail d-block mx-auto" style="max-height: 40rem !important;" alt="">
                             </div>
                         @endforeach
                     </div>
@@ -139,16 +138,22 @@
                             <div class="tab-pane fade" id="pills-manufacturer" role="tabpanel"
                                 aria-labelledby="pills-manufacturer-tab">
                                 <div class="row">
-
+                                    <ul class="mx-auto list-group list-group-flush">
+                                        <li class="list-group-item" style="{{  ($catalogCarInfo->priceShow == "0")?'display: none;':'' }}"><strong>價格：</strong><b style="font-size: 1.2rem;">{{  ($catalogCarInfo->priceShow == "0")?'':' '.$catalogCarInfo->price.' 萬' }}</b></li>
+                                        <li class="list-group-item"><strong>年式：</strong>{{ date('Ym', strtotime($catalogCarInfo->carManufactureYear)) }}</li>
+                                        <li class="list-group-item"><strong>里程數：</strong>{{  $catalogCarInfo->milage .' '. ucfirst($catalogCarInfo->milageUnit) }}</li>
+                                        <li class="list-group-item"><strong>型號：</strong>{{ \DB::table('car_model_infos')->where('id', $catalogCarInfo->carModel)->first()->modelName }}</li>
+                                        <li class="list-group-item" style="{{ ($catalogCarInfo->carFileUrl == "")?'display: none;':'' }}" ><strong>認證下載：</strong><a href="{{ url('upload/'.$catalogCarInfo->carFileUrl) }}" target="_blank" download>下載</a></li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
                                 <div class="row">
-
-
+                                    {!! $catalogCarInfo->carDiscription !!}
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

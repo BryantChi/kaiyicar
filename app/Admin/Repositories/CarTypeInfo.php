@@ -13,4 +13,8 @@ class CarTypeInfo extends EloquentRepository
      * @var string
      */
     protected $eloquentClass = Model::class;
+
+    public function getAllCarTypes() {
+        return $this->eloquentClass;
+    }
 }

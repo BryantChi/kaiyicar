@@ -11,7 +11,7 @@
           <li class="nav-item {{ request()->is('about_us') ? 'active' : '' }}"><a href="{{ url('/about_us') }}" class="nav-link">關於我們</a></li>
           <li class="nav-item {{ request()->is('authenticate') ? 'active' : '' }}"><a href="{{ url('/authenticate') }}" class="nav-link">安心認證</a></li>
           <li class="nav-item {{ request()->is('catalog*') ? 'active' : '' }}"><a href="{{ url('/catalog') }}" class="nav-link">上架型錄</a></li>
-          <li class="nav-item {{ request()->is('process') ? 'active' : '' }}"><a href="" class="nav-link">購車流程</a></li>
+          <li class="nav-item {{ request()->is('process') ? 'active' : '' }}"><a href="{{ url('/process') }}" class="nav-link">購車流程</a></li>
           <li class="nav-item {{ request()->is('democar') ? 'active' : '' }}"><a href="{{ url('/democar') }}" class="nav-link">購車知識</a></li>
           <li class="nav-item {{ request()->is('contactus') ? 'active' : '' }}"><a href="{{ url('/contactus') }}" class="nav-link">聯絡我們</a></li>
           <li class="nav-item {{ request()->is('friendlink') ? 'active' : '' }}"><a href="{{ url('/friendlink') }}" class="nav-link">友情連結</a></li>

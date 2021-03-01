@@ -25,6 +25,7 @@ class CatalogCarInfoController extends AdminController
             $grid->disableFilterButton();
             $grid->showColumnSelector();
             $grid->column('id')->sortable();
+            $grid->order->orderable();
             $grid->column('carName');
             $grid->column('carFrontCover')->image();
             $grid->column('carType')->display(function($carTypeId) {
@@ -159,6 +160,12 @@ class CatalogCarInfoController extends AdminController
                     $form->checkbox('carOptionals')->options(CarOptionalInfo::where('carTypeId', 2)->pluck('optionalName', 'id'))->canCheckAll();
 
 
+                })->when(3, function (Form $form) {
+
+                    // $form->checkboxCard('carOptionals', __('配備'))->options(CarOptionalInfo::where('carTypeId', 1)->pluck('optionalName', 'id'))->canCheckAll();
+                    $form->checkbox('carOptionals')->options(CarOptionalInfo::where('carTypeId', 3)->pluck('optionalName', 'id'))->canCheckAll();
+
+
                 });
 
             // $form->checkbox('carOptionals')->options(CarOptionalInfo::pluck('optionalName', 'id'))->canCheckAll()
@@ -174,8 +181,8 @@ class CatalogCarInfoController extends AdminController
             $form->radio('priceShow')->options([1 => '顯示', 0 => '不顯示'])->default(1)->required();
             $form->currency('milage')->symbol('')->required();
             $form->radio('milageUnit')->options(['miles' => 'miles', 'km' => 'km'])->default('miles')->required();
-            $form->multipleImage('carImageUrl')->move('images/'.date('Ym'))->maxSize(1024)->uniqueName()->rules('mimes:jpg,jpeg,png,gif')->sortable();
-            $form->file('carFileUrl')->move('files/certificate/'.date('Ym'))->uniqueName()->rules('mimes:pdf,doc,docx,txt|nullable');
+            $form->multipleImage('carImageUrl')->move('images/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable')->sortable();
+            $form->multipleFile('carFileUrl')->move('files/certificate/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:pdf,doc,docx,txt|nullable')->sortable();
             $form->editor('carDiscription')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
             styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
             table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']])->imageDirectory('editor/images');

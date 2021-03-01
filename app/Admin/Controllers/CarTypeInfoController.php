@@ -10,6 +10,12 @@ use Dcat\Admin\Http\Controllers\AdminController;
 
 class CarTypeInfoController extends AdminController
 {
+    protected $carTypeRepo;
+
+    public function __construct(CarTypeInfo $carTypeInfo) {
+        $this->carTypeRepo = $carTypeInfo;
+    }
+
     /**
      * Make a grid builder.
      *
@@ -25,6 +31,11 @@ class CarTypeInfoController extends AdminController
             $grid->column('typeName');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
+
+            $info = $this->carTypeRepo->getAllCarTypes()::all();
+            if (count($info) >= 3) {
+                $grid->disableCreateButton();
+            }
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');

@@ -27,7 +27,7 @@
                                 <div class="icon mr-3">
                                     <span class="icon-map-o"></span>
                                 </div>
-                                <p><span>Address:</span> 台南市中華南路2段151號</p>
+                                <p><span>Address:</span> 台南市南區中華南路2段151號</p>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -43,7 +43,7 @@
                                 <div class="icon mr-3">
                                     <span class="icon-envelope-o"></span>
                                 </div>
-                                <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                <p><span>Email:</span> <a href="mailto:kaiyicar@gmail.com">kaiyicar@gmail.com</a></p>
                             </div>
                         </div>
                     </div>

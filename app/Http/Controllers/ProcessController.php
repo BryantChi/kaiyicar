@@ -14,6 +14,7 @@ class ProcessController extends Controller
     public function index()
     {
         //
+        return view('process');
     }
 
     /**
