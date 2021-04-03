@@ -25,7 +25,7 @@ class CatalogCarInfoController extends AdminController
             $grid->disableFilterButton();
             $grid->showColumnSelector();
             $grid->column('id')->sortable();
-            $grid->order->orderable();
+            // $grid->order->orderable();
             $grid->column('carName');
             $grid->column('carFrontCover')->image();
             $grid->column('carType')->display(function($carTypeId) {
@@ -55,13 +55,13 @@ class CatalogCarInfoController extends AdminController
                 //     return "<span class='label label-success'>{$CarOptionalInfo['optionalName']}</span>";
                 // }, $carOptionals);
                 return $result;
-            })->label('success');
+            })->label('success')->hide();
             $grid->column('carManufactureYear');
             $grid->column('price');
             $grid->column('priceShow');
             $grid->column('milage');
             $grid->column('milageUnit');
-            $grid->column('carImageUrl', __('圖片'))->image();
+            $grid->column('carImageUrl', __('圖片'))->image()->hide();
             $grid->column('carFileUrl')->downloadable();
             // $grid->column('carDiscription');
             $grid->column('created_at');

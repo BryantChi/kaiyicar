@@ -49,27 +49,67 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://www.kaiyi-car.com.tw/home/cache/widgetkit/gallery/36/01-dcaee6f3ec.jpg"
-                                class="d-block w-100 img-thumbnail" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <img src="{{ asset('images/process-01.jpeg') }}"
+                                class="d-block w-100 img-thumbnail" alt="">
+                            <div class="carousel-caption d-none d-md-block text-left">
+                                {{-- <h5>First slide label</h5> --}}
+                                <div class="p-2" style="background-color: rgba(79,79,79,0.7);border-radius:5px;max-height:16rem;overflow-y:scroll;">
+                                    一、接單引進:
+                                    <ol>
+                                        <li>聯絡我們→與楷懿的服務專員聯絡，我們會向您做進一步的說明，並了解您購 車的需求。</li>
+                                        <li>簽定尋車委託書→簽定委託書並收取訂金。</li>
+                                        <li>國外尋車→楷懿會依照您所提供的車輛需求，找尋車況良好且無事故的車輛，亦會將車輛的相關資料、車身照片以及價格提供給您，如果您願意訂購，則另外簽訂接單合約書，反之，如果在2個星期內我們無法找尋到您的理想車輛，楷懿會將全數訂金退還給您。</li>
+                                        <li>簽訂接單合約書→雙方簽定合約書後，我們會向買方收取購車訂金，接著由楷懿將您的愛車購入。</li>
+                                        <li>陸運/出口→安排國外當地的陸運及相關出口手續。</li>
+                                        <li>海運→安排裝船及船運日期，美國船運時間約22天，德國船運時間約45天。</li>
+                                        <li>報關及關稅相關費用繳納→車輛到港後，楷懿會委託專業報關單位，處理車輛拆櫃、報關手續和相關費用繳納。</li>
+                                        <li>車輛檢測安排→楷懿會將您的愛車安排至車測中心做測試，測試項目主要有汙染、噪音、燈光、耗能四大項，排測日期則以車測中心實際安排為主。</li>
+                                        <li>檢測資料核可→車輛檢測後，車輛報告須上傳至各相關單位，並由承辦人員審閱核可。</li>
+                                        <li>監理站領牌/交車→楷懿委託專人至監理站辦理車輛領牌之手續，則交車當日買方付清車輛尾款及相關費用後，由服務專員親自將您的愛車交付給您。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://www.kaiyi-car.com.tw/home/cache/widgetkit/gallery/36/02-6bda9037b0.jpg"
-                                class="d-block w-100 img-thumbnail" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <img src="{{ asset('images/process-02.jpeg') }}"
+                                class="d-block w-100 img-thumbnail" alt="">
+                            <div class="carousel-caption d-none d-md-block text-left">
+                                {{-- <h5>Second slide label</h5> --}}
+                                <div class="p-2" style="background-color: rgba(79,79,79,0.7);border-radius:5px;max-height:16rem;overflow-y:scroll;">
+                                    二、車輛預購:
+                                    <ol>
+                                        <li>聯絡我們→與楷懿的服務專員聯絡，我們會不定期提供部分車型的預購。</li>
+                                        <li>說明/溝通→服務專員會向您說明預購的方式，以及提供相關資料讓您參考，您也可以讓我們了解對於車輛的需求</li>
+                                        <li>簽訂預購合約書→選定您滿意的車輛後，雙方簽訂合約書，楷懿會向買方收取購車訂金。</li>
+                                        <li>陸運/出口→安排國外當地的陸運及相關出口手續。</li>
+                                        <li>海運→安排裝船及船運日期，美國船運時間約22天，德國船運時間約45天。</li>
+                                        <li>報關及關稅相關費用繳納→車輛到港後，楷懿會委託專業報關單位，處理車輛拆櫃、報關手續和相關費用繳納。</li>
+                                        <li>車輛檢測安排→楷懿會將您的愛車安排至車測中心做測試，測試項目主要有汙染、噪音、燈光、耗能四大項，排測日期則以車測中心實際安排為主。</li>
+                                        <li>檢測資料核可→車輛檢測後，車輛報告須上傳至各相關單位，並由承辦人員審閱核可。</li>
+                                        <li>監理站領牌/交車→楷懿委託專人至監理站辦理車輛領牌之手續，則交車當日買方付清車輛尾款及相關費用後，由服務專員親自將您的愛車交付給您。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://www.kaiyi-car.com.tw/home/cache/widgetkit/gallery/36/03-b7091d1fce.jpg"
-                                class="d-block w-100 img-thumbnail" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <img src="{{ asset('images/process-03.jpeg') }}"
+                                class="d-block w-100 img-thumbnail" alt="">
+                            <div class="carousel-caption d-none d-md-block text-left">
+                                {{-- <h5>Third slide label</h5> --}}
+                                <div class="p-2" style="background-color: rgba(79,79,79,0.7);border-radius:5px;max-height:16rem;overflow-y:scroll;">
+                                    三、代辦進口:
+                                    <ol>
+                                        <li>聯絡我們→與楷懿的服務專員聯絡，讓我們了解您需要我們協助的地方。</li>
+                                        <li>報價說明→楷懿會依照您所提供的車輛進行報價以及代辦的費用，並說明個人需負擔的風險。</li>
+                                        <li>簽訂代辦委託合約書→簽訂合約書，楷懿會向您收取全額費用，包含國內、外車輛辦理所需支付之費用，則國內監理站領牌之相關費用，委託人則於交車當日給付。</li>
+                                        <li>陸運/出口→安排國外當地的陸運及相關出口手續。</li>
+                                        <li>海運→安排裝船及船運日期，美國船運時間約22天，德國船運時間約45天</li>
+                                        <li>報關及關稅相關費用繳納→車輛到港後，楷懿會委託專業報關單位，處理車輛拆櫃、報關手續和相關費用繳納。</li>
+                                        <li>車輛檢測安排→楷懿會將您的愛車安排至車測中心做測試，測試項目主要有汙染、噪音、燈光、耗能四大項，排測日期則以車測中心實際安排為主。</li>
+                                        <li>檢測資料核可→車輛檢測後，車輛報告須上傳至各相關單位，並由承辦人員審閱核可。</li>
+                                        <li>監理站領牌/交車→楷懿委託專人至監理站辦理車輛領牌之手續，則交車當日由服務專員親自將您的愛車交付給您。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>

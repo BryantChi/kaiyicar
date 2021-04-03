@@ -8355,7 +8355,8 @@ h1, h2, h3, h4, h5,
   background-position: top center; }
   @media (max-width: 1199.98px) {
     .hero-wrap {
-      background-position: center center !important; } }
+      background-position: center left !important; } }
+      /* center */
   .hero-wrap .overlay {
     position: absolute;
     top: 0;
@@ -9166,7 +9167,8 @@ textarea.form-control {
     font-weight: 700;
     color: #fff; }
     .ftco-footer .logo span {
-      color: #01d28e; }
+      /* color: #01d28e;  */
+      color: #bf42f5;}
   .ftco-footer .ftco-footer-widget h2 {
     font-weight: normal;
     color: #fff;
