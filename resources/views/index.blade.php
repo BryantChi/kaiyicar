@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 <style>
-    a:link {
+    section a:link {
         color: #333333;
     }
     a:hover {
