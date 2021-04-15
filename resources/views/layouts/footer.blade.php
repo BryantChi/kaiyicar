@@ -3,10 +3,11 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2"><a href="#" class="logo"><span>kaiyi</span>Car</a></h2>
-                    <p>楷懿國際-Kaiyi Car 主要經營國外新、舊車進口代辦、接單訂購及現車出售
-                        將有效率、有保障、專業的為您服務 並且提供代辦國外進口車輛檢測服務 楷懿國際將合法為您代辦所有流程，讓您愛車入手，合法有保障。</p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                    <img src="{{ asset('images/kaiyi_logo.png') }}" style="max-width:10rem;" class="p-1 mx-auto" />
+                    <h2 class="ftco-heading-2"><a href="#" class="logo"><span>kaiyi</span>Car 楷懿國際</a></h2>
+                    {{-- <p>楷懿國際-Kaiyi Car 主要經營國外新、舊車進口代辦、接單訂購及現車出售
+                        將有效率、有保障、專業的為您服務 並且提供代辦國外進口車輛檢測服務 楷懿國際將合法為您代辦所有流程，讓您愛車入手，合法有保障。</p> --}}
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-2">
                         <li class="ftco-animate"><a
                                 href="https://liff.line.me/1645278921-kWRPP32q?openerPlatform=native&openerKey=urlSchema%3Aexternal&accountId=psg3611g"><svg
                                     xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
@@ -253,7 +254,9 @@
                     {{-- <h2 class="ftco-heading-2">Have a Questions?</h2> --}}
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">台南市南區中華南路2段151號</span></li>
+                            <li><span class="icon icon-map-marker"></span><a target="_blank"
+                                    href="https://www.google.com/maps/place/702%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8D%97%E5%8D%80%E4%B8%AD%E8%8F%AF%E5%8D%97%E8%B7%AF%E4%BA%8C%E6%AE%B5151%E8%99%9F/@22.9613701,120.1895483,17z/data=!3m1!4b1!4m5!3m4!1s0x346e75c78e8488bd:0xac794493fae9880c!8m2!3d22.9613701!4d120.191737"><span
+                                        class="text">台南市南區中華南路2段151號</span></a></li>
                             <li><a href="tel://06262-8699"><span class="icon icon-phone"></span><span
                                         class="text">(06)262-8699</span></a></li>
                             <li><a href="mailto:kaiyicar@gmail.com"><span class="icon icon-envelope"></span><span
@@ -264,7 +267,10 @@
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <img src="{{ asset('images/line_qrcode.png') }}" style="width: 10rem;" alt="">
+                    <img class="img-thumbnail mx-1" src="{{ asset('images/line_qrcode.png') }}" style="width: 10rem;"
+                        alt="">
+                    <img class="img-thumbnail mx-1" src="{{ asset('images/kaiyi_fb.jpg') }}" style="width: 9.7rem;"
+                        alt="">
                 </div>
             </div>
         </div>

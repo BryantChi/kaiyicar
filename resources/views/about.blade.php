@@ -17,14 +17,20 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-about">
+    <div class="container text-center">
+        <img src="{{ asset('images/aboutus_header.jpg') }}" class="img-fluid" />
+    </div>
+
+    <section class="ftco-section ">
+        {{-- ftco-about --}}
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
+                {{-- <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
                     style="background-image: url(images/about.jpg);">
-                </div>
+                </div> --}}
                 <div class="col-md-6 wrap-about ftco-animate">
-                    <div class="heading-section heading-section-white pl-md-5">
+                    <div class="heading-section  pl-md-5">
+                        {{-- heading-section-white --}}
                         <p>關於我們&nbsp;<span class="subheading d-inline">About us</span></p>
                         <h2 class="mb-4">Welcome to 楷懿</h2>
 
