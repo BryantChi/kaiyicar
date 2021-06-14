@@ -11,9 +11,13 @@
 
 @section('content_section')
 
-    <div style="display: {{ request()->routeIs('index') ? '' : 'none' }};">
+    {{-- <div style="display: {{ request()->routeIs('index') ? '' : 'none' }};">
         @include('layouts.hero')
-    </div>
+    </div> --}}
+
+    <section id="hero">
+        @include('layouts.hero')
+    </section>
 
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
