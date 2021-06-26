@@ -1,13 +1,13 @@
 @extends('layouts.master')
 
-<style>
+{{-- <style>
     section a:link {
         color: #333333;
     }
     a:hover {
         color: #;
     }
-</style>
+</style> --}}
 
 @section('content_section')
 
@@ -19,7 +19,7 @@
         @include('layouts.hero')
     </section>
 
-    <section class="ftco-section ftco-no-pt bg-light">
+    <section class="bg-light py-5 px-3">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-md-12	featured-top">
