@@ -90,7 +90,7 @@
 
 
                         <div class="portfolio-wrap featured-img" onclick="">
-                            <img src="{{ asset('upload/'.$item->carFrontCover) }}" class="img-fluid img-centered" alt="{{ $item->carName }}">
+                            <img src="{{ asset('uploads/'.$item->carFrontCover) }}" class="img-fluid img-centered" alt="{{ $item->carName }}">
                             {{-- {{ asset('upload/'.$item->carFrontCover) }} --}}
                             {{-- https://richfulmotors.com/upload/ --}}
                             {{-- defaultFeatured --}}
