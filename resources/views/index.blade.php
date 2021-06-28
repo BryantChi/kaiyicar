@@ -22,7 +22,8 @@
     <section class="bg-light py-5 px-3">
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-md-12	featured-top">
+                <div class="col-md-12	">
+                    {{-- featured-top --}}
                     <div class="row no-gutters">
                         <div class="col-md-2 d-flex align-items-center">
                             {{-- <form action="#"

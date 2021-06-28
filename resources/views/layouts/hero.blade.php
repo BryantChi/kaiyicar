@@ -36,24 +36,6 @@
 
             <!-- Slide 1 -->
             <div class="carousel-item active"
-                style="background: url({{ asset('images/kaiyicar_main.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
-                <div class="carousel-container">
-                    <div class="carousel-content">
-                        <h2 class="animate__animated animate__fadeInDown"
-                            style="/*letter-spacing:0.1rem !important;*/font-family: 'Helvetica Neue', sans-serif;">精選車款
-                        </h2>
-                        <p class="animate__animated animate__fadeInUp">楷懿國際-Kaiyi Car 主要經營國外新、舊車進口代辦、接單訂購及現車出售
-                            將有效率、有保障、專業的為您服務 並且提供代辦國外進口車輛檢測服務 楷懿國際將合法為您代辦所有流程，讓您愛車入手，合法有保障。</p>
-                        <div>
-                            <a href="{{ url('/catalog') }}"
-                                class="btn-get-started animate__animated animate__fadeInUp scrollto">前往</a>
-                            {{-- {{Route('Featured')}} --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item"
                 style="background: url({{ asset('images/home01.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
                 <div class="carousel-container">
                     <div class="carousel-content">
@@ -72,7 +54,25 @@
             </div>
 
             <div class="carousel-item"
-                style="background: url({{ asset('images/home02.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
+                style="background: url({{ asset('images/kaiyi03.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
+                <div class="carousel-container">
+                    <div class="carousel-content">
+                        <h2 class="animate__animated animate__fadeInDown"
+                            style="/*letter-spacing:0.1rem !important;*/font-family: 'Helvetica Neue', sans-serif;">精選車款
+                        </h2>
+                        <p class="animate__animated animate__fadeInUp">楷懿國際-Kaiyi Car 主要經營國外新、舊車進口代辦、接單訂購及現車出售
+                            將有效率、有保障、專業的為您服務 並且提供代辦國外進口車輛檢測服務 楷懿國際將合法為您代辦所有流程，讓您愛車入手，合法有保障。</p>
+                        <div>
+                            <a href="{{ url('/catalog') }}"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">前往</a>
+                            {{-- {{Route('Featured')}} --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background: url({{ asset('images/kaiyi02.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
                 <div class="carousel-container">
                     <div class="carousel-content">
                         <h2 class="animate__animated animate__fadeInDown"
@@ -108,7 +108,25 @@
             </div>
 
             <div class="carousel-item"
-                style="background: url({{ asset('images/kaiyi02.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
+                style="background: url({{ asset('images/home02.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
+                <div class="carousel-container">
+                    <div class="carousel-content">
+                        <h2 class="animate__animated animate__fadeInDown"
+                            style="/*letter-spacing:0.1rem !important;*/font-family: 'Helvetica Neue', sans-serif;">精選車款
+                        </h2>
+                        <p class="animate__animated animate__fadeInUp">楷懿國際-Kaiyi Car 主要經營國外新、舊車進口代辦、接單訂購及現車出售
+                            將有效率、有保障、專業的為您服務 並且提供代辦國外進口車輛檢測服務 楷懿國際將合法為您代辦所有流程，讓您愛車入手，合法有保障。</p>
+                        <div>
+                            <a href="{{ url('/catalog') }}"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">前往</a>
+                            {{-- {{Route('Featured')}} --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background: url({{ asset('images/kaiyicar_main.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
                 <div class="carousel-container">
                     <div class="carousel-content">
                         <h2 class="animate__animated animate__fadeInDown"

@@ -2,7 +2,7 @@
 
 @section('content_section')
 
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');"
+    {{-- <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -15,7 +15,23 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>  --}}
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs" style="margin-top: 5rem;">
+        <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>關於我們&nbsp;About Us</h2>
+            <ol>
+            <li><a href="{{ route('index') }}">Home</a></li>
+            <li>About Us</li>
+            </ol>
+        </div>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
 
     <div class="container text-center">
         <img src="{{ asset('images/aboutus_header.jpg') }}" class="img-fluid" />
@@ -28,10 +44,10 @@
                 {{-- <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
                     style="background-image: url(images/about.jpg);">
                 </div> --}}
-                <div class="col-md-6 wrap-about ftco-animate">
-                    <div class="heading-section  pl-md-5">
+                <div class="col-xl pl-0 pl-lg pr-lg-1 d-flex align-items-stretch mx-5">
+                    <div class="content d-flex flex-column justify-content-center">
                         {{-- heading-section-white --}}
-                        <p>關於我們&nbsp;<span class="subheading d-inline">About us</span></p>
+                        {{-- <p>關於我們&nbsp;<span class="subheading d-inline">About us</span></p> --}}
                         <h2 class="mb-4">Welcome to 楷懿</h2>
 
                         {!! $aboutUsInfo->content !!}
