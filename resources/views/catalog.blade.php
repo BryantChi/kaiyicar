@@ -89,7 +89,7 @@
                         </div> --}}
 
 
-                        <div class="portfolio-wrap featured-img" onclick="">
+                        <div class="portfolio-wrap featured-img" onclick="detail('{{ url('catalog/' . $item->id ) }}')">
                             <img src="{{ asset('uploads/'.$item->carFrontCover) }}" class="img-fluid img-centered" alt="{{ $item->carName }}">
                             {{-- {{ asset('upload/'.$item->carFrontCover) }} --}}
                             {{-- https://richfulmotors.com/upload/ --}}
@@ -130,5 +130,11 @@
             </div> --}}
         </div>
     </section>
+
+    <script>
+        function detail(src) {
+            window.location.href = src;
+        }
+    </script>
 
 @endsection
