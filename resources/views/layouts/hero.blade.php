@@ -25,7 +25,14 @@
     </div>
   </div> --}}
 
+<style>
+    @media (max-width:768px) {
+        #carousel-item01 {
+            background-position-x: 65% !important;
+        }
+    }
 
+</style>
 
 <div class="hero-container">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -35,7 +42,7 @@
         <div class="carousel-inner" role="listbox">
 
             <!-- Slide 1 -->
-            <div class="carousel-item active"
+            <div class="carousel-item active" id="carousel-item01"
                 style="background: url({{ asset('images/home01.jpg') }});background-size: cover;background-repeat: no-repeat;background-position: center;">
                 <div class="carousel-container">
                     <div class="carousel-content">
