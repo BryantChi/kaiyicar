@@ -21,19 +21,19 @@
     <section class="breadcrumbs">
         <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-            <h2>車款介紹&nbsp;Introduction</h2>
-            <ol>
-            <li><a href="{{ Route('index') }}">Home</a></li>
-            <li><a href="{{ url('/catalog') }}">Catalog</a></li>
-            <li>Introduction</li>
-            </ol>
-        </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>車款介紹&nbsp;Introduction</h2>
+                <ol>
+                    <li><a href="{{ Route('index') }}">Home</a></li>
+                    <li><a href="{{ url('/catalog') }}">Catalog</a></li>
+                    <li>Introduction</li>
+                </ol>
+            </div>
 
         </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="ftco-section bg-light">
+    {{-- <section class="ftco-section bg-light">
         <div class="container">
 
             <div class="row justify-content-center">
@@ -78,7 +78,7 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-md-12">
                     <div class="text text-center">
-                        {{-- <span class="subheading">Cheverolet</span> --}}
+                        {{-- <span class="subheading">Cheverolet</span>
                         <h2>{{ $catalogCarInfo->carName }}</h2>
                     </div>
                 </div>
@@ -175,7 +175,128 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="portfolio-details-container">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="car-details">
+                            @if (count($catalogCarInfo->carImageUrl) == 0)
+                                <img class="img-fluid img-thumbnail d-block mx-auto"
+                                    src="{{ $catalogCarInfo->carFrontCover ? asset('uploads/' . $catalogCarInfo->carFrontCover) : '' }}"
+                                    style="max-height: 40rem !important;">
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div id="carouselExampleIndicators" class="carousel slide col-md-10 mx-auto" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            @foreach ($catalogCarInfo->carImageUrl as $key => $item)
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                                    class="{{ $key == 0 ? 'active' : '' }}"></li>
+                            @endforeach
+                        </ol>
+                        <div class="carousel-inner">
+                            @foreach ($catalogCarInfo->carImageUrl as $key => $item)
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}"
+                                    style="background:rgba(75, 75, 75, 0.2);">
+                                    <img src="{{ $item ? asset('uploads/' . $item) : '' }}"
+                                        class="img-fluid img-thumbnail d-block mx-auto"
+                                        style="max-height: 40rem !important;" alt="">
+                                </div>
+                            @endforeach
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="portfolio-info">
+                    <h3>{{ $catalogCarInfo->carName }}</h3>
+                    <ul>
+                        <li style="{{ $catalogCarInfo->priceShow == '0' ? 'display: none;' : '' }}"><strong>價格：</strong><b
+                                style="font-size: 1.2rem;">{{ $catalogCarInfo->priceShow == '0' ? '' : ' ' . $catalogCarInfo->price . ' 萬' }}</b>
+                        </li>
+                        <li><strong>年式：</strong>{{ date('Ym', strtotime($catalogCarInfo->carManufactureYear)) }}</li>
+                        <li><strong>里程數：</strong>{{ $catalogCarInfo->milage . ' ' . ucfirst($catalogCarInfo->milageUnit) }}
+                        </li>
+                        <li><strong>型號：</strong>{{ \DB::table('car_model_infos')->where('id', $catalogCarInfo->carModel)->first()->modelName }}
+                        </li>
+                        <li style="{{ $catalogCarInfo->carFileUrl == '' ? 'display: none;' : '' }}">
+                            <strong>認證下載：</strong><a href="{{ url('upload/' . $catalogCarInfo->carFileUrl) }}"
+                                target="_blank" download>下載</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="portfolio-description">
+                <h2>優點特性</h2>
+                <p>
+                    {!! $catalogCarInfo->carDiscription !!}
+                </p>
+            </div>
+
+            <div class="portfolio-description">
+                <h2>主要配備</h2>
+                {{-- <ul class="wrapper-grid" style="list-style-type:square !important;">
+                  @foreach ($optional as $item)
+                  <li class="mx-3" style="display:inline-block;">{{ $item->optionalName }}</li>
+                  @endforeach
+              </ul> --}}
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <ul class="features">
+                            @foreach ($catalogCarOptionals as $key => $item)
+                                @if ($key % 3 == 0)
+                                    <li class="check"><span class="ion-ios-checkmark"></span>{{ $item }}</li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="features">
+                            @foreach ($catalogCarOptionals as $key => $item)
+                                @if ($key % 3 == 1)
+                                    <li class="check"><span class="ion-ios-checkmark"></span>{{ $item }}s</li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="features">
+                            @foreach ($catalogCarOptionals as $key => $item)
+                                @if ($key % 3 == 2)
+                                    <li class="check"><span class="ion-ios-checkmark"></span>{{ $item }}</li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
 
 @endsection
