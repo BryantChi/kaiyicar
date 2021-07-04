@@ -303,7 +303,7 @@
                                 src="{{ asset('images/kaiyi_logo.png') }}" alt="kaiyiCar&nbsp;楷懿國際" class="img-fluid p-1 mx-auto"
                                 style="max-width:10rem;"></a></h3>
                     {{-- @if (request()->routeIs('index')) --}}
-                    <h1 style="font-size: 24px!important;"><span>kaiyi</span>Car 楷懿國際</h1>
+                    <h1 style="font-size: 24px!important;color: white;"><span>kaiyi</span>Car 楷懿國際</h1>
                     {{-- @endif --}}
 
 
