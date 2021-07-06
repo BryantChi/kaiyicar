@@ -33,6 +33,7 @@
         <li class="{{ request()->is('about_us') ? 'active' : '' }}"><a href="{{ url('/about_us') }}">關於我們</a></li>
         <li class="{{ request()->is('authenticate') ? 'active' : '' }}"><a href="{{ url('/authenticate') }}">安心認證</a></li>
         <li class="{{ request()->is('catalog*') ? 'active' : '' }}"><a href="{{ url('/catalog') }}">精選車款</a></li>
+        <li class="{{ request()->is('witnessCar*') ? 'active' : '' }}"><a href="{{ url('/witnessCar') }}">購車見證</a></li>
         <li class="{{ request()->is('process') ? 'active' : '' }}"><a href="{{ url('/process') }}">購車流程</a></li>
         <li class="{{ request()->is('democar') ? 'active' : '' }}"><a href="{{ url('/democar') }}">購車知識</a></li>
         <li class="{{ request()->is('contactus') ? 'active' : '' }}"><a href="{{ url('/contactus') }}">聯絡我們</a></li>

@@ -64,6 +64,10 @@
                 <p>Our vehicles are only provided by official dealers and must pass Richful Motor's rigorous standard operating procedure (SOP) inspections.</p>
             </div>
 
+            <div>
+                <hr>
+            </div>
+
             <div id="page" class="overflow-auto text-center">
                 {{ $catalogCarInfo->onEachSide(1)->links() }}
             </div>

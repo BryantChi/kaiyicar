@@ -11,6 +11,7 @@ namespace Dcat\Admin {
     use Illuminate\Support\Collection;
 
     /**
+     * @property Grid\Column|Collection order
      * @property Grid\Column|Collection id
      * @property Grid\Column|Collection carTypeId
      * @property Grid\Column|Collection optionalName
@@ -34,7 +35,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection slug
      * @property Grid\Column|Collection http_method
      * @property Grid\Column|Collection http_path
-     * @property Grid\Column|Collection order
      * @property Grid\Column|Collection parent_id
      * @property Grid\Column|Collection menu_id
      * @property Grid\Column|Collection typeName
@@ -70,7 +70,10 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection user_id
      * @property Grid\Column|Collection linkName
      * @property Grid\Column|Collection linkUrl
+     * @property Grid\Column|Collection witnessFrontCover
+     * @property Grid\Column|Collection path
      *
+     * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection carTypeId(string $label = null)
      * @method Grid\Column|Collection optionalName(string $label = null)
@@ -94,7 +97,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection slug(string $label = null)
      * @method Grid\Column|Collection http_method(string $label = null)
      * @method Grid\Column|Collection http_path(string $label = null)
-     * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection parent_id(string $label = null)
      * @method Grid\Column|Collection menu_id(string $label = null)
      * @method Grid\Column|Collection typeName(string $label = null)
@@ -130,12 +132,15 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection user_id(string $label = null)
      * @method Grid\Column|Collection linkName(string $label = null)
      * @method Grid\Column|Collection linkUrl(string $label = null)
+     * @method Grid\Column|Collection witnessFrontCover(string $label = null)
+     * @method Grid\Column|Collection path(string $label = null)
      */
     class Grid {}
 
     class MiniGrid extends Grid {}
 
     /**
+     * @property Show\Field|Collection order
      * @property Show\Field|Collection id
      * @property Show\Field|Collection carTypeId
      * @property Show\Field|Collection optionalName
@@ -159,7 +164,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection slug
      * @property Show\Field|Collection http_method
      * @property Show\Field|Collection http_path
-     * @property Show\Field|Collection order
      * @property Show\Field|Collection parent_id
      * @property Show\Field|Collection menu_id
      * @property Show\Field|Collection typeName
@@ -195,7 +199,10 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection user_id
      * @property Show\Field|Collection linkName
      * @property Show\Field|Collection linkUrl
+     * @property Show\Field|Collection witnessFrontCover
+     * @property Show\Field|Collection path
      *
+     * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection carTypeId(string $label = null)
      * @method Show\Field|Collection optionalName(string $label = null)
@@ -219,7 +226,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection slug(string $label = null)
      * @method Show\Field|Collection http_method(string $label = null)
      * @method Show\Field|Collection http_path(string $label = null)
-     * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection parent_id(string $label = null)
      * @method Show\Field|Collection menu_id(string $label = null)
      * @method Show\Field|Collection typeName(string $label = null)
@@ -255,6 +261,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection user_id(string $label = null)
      * @method Show\Field|Collection linkName(string $label = null)
      * @method Show\Field|Collection linkUrl(string $label = null)
+     * @method Show\Field|Collection witnessFrontCover(string $label = null)
+     * @method Show\Field|Collection path(string $label = null)
      */
     class Show {}
 

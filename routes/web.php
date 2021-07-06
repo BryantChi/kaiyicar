@@ -44,5 +44,7 @@ Route::resource('/contactus', 'ContactUsController');
 
 Route::resource('/friendlink', 'FriendlinkController');
 
+Route::resource('/witnessCar', 'WitnessCarController');
+
 
 

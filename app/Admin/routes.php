@@ -26,5 +26,6 @@ Route::group([
     $router->resource('Friendlink', 'FriendlinkInfoController');
     $router->resource('News', 'NewsInfoController');
     $router->resource('Lore', 'CarLoreInfoController');
+    $router->resource('CarWitness', 'CarWitnessInfoController');
 
 });
