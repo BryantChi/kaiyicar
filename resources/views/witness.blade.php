@@ -17,7 +17,7 @@
     }
 
     .witness-img img {
-        max-height: 100% !important;
+        /* max-height: 100% !important; */
     }
 </style>
 
