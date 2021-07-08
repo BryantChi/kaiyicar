@@ -1,6 +1,12 @@
 @extends('layouts.master')
 
 <style>
+    #page ul li a,
+    #page ul li span {
+        border-radius: 50%;
+        width: 40px;
+        margin: 2px;
+    }
     .witness-img {
         cursor: pointer !important;
         height: 16.45rem !important;
@@ -36,7 +42,7 @@
 
     {{-- <div class="container text-center"><img class="img-fluid img-thumbnail" src="{{asset('images/witnessImg_inside.jpg')}}" alt=""></div> --}}
     <!-- ======= Portfolio Section ======= -->
-    <section id="FeaturedCar" class="portfolio">
+    <section class="portfolio">
         <div class="container">
 
             <div class="section-title">
@@ -49,7 +55,7 @@
                 <hr>
             </div>
 
-            <div class="overflow-auto">
+            <div id="page" class="overflow-auto">
                 {{ $witnessInfo->onEachSide(1)->links() }}
             </div>
 
@@ -59,7 +65,7 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap witness-img" onclick="detail('{{ url('witnessCar/'.$item->id) }}')">
-                        <img src="{{ url('uploads/'.$item->witnessFrontCover) }}" class="img-fluid img-centered" alt="{{ $item->title }}">
+                        <img src="{{ asset('uploads/'.$item->witnessFrontCover) }}" class="img-fluid img-centered" alt="{{ $item->title }}">
                         {{-- {{ asset('upload/'.$item->carFrontCover) }} --}}
                         <div class="portfolio-info">
                             <h4>{{ $item->title }}</h4>
