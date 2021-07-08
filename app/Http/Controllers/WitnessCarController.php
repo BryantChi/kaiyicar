@@ -17,9 +17,9 @@ class WitnessCarController extends Controller
         //
         $info = CarWitnessInfo::orderBy('id', 'desc')->paginate(10);
 
-        if ($request->ajax()) {
-            return \Response::json(\View::make('witness-items', array('witnessInfo' => $info))->render());
-        }
+        // if ($request->ajax()) {
+        //     return \Response::json(\View::make('witness-items', array('witnessInfo' => $info))->render());
+        // }
 
         return view('witness', ['witnessInfo' => $info]);
     }
