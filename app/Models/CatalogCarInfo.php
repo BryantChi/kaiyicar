@@ -15,6 +15,7 @@ class CatalogCarInfo extends Model
     protected $casts = [
         'carOptionals' => 'json',
         'carImageUrl' => 'json',
+        'carFileUrl' => 'json',
     ];
 
 }
