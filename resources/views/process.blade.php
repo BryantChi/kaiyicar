@@ -32,10 +32,47 @@
         </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="ftco-section">
+    <section id="faq" class="faq section-bg">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>購車流程&nbsp;Process</h2>
+            {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
+          </div>
+
+          <div class="faq-list">
+            <ul>
+              <li data-aos="fade-up">
+                <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">接單引進之車輛進口流程 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-1" class="collapse" data-parent=".faq-list">
+                    <ol>
+                        <li>聯絡我們→與楷懿的服務專員聯絡，我們會向您做進一步的說明，並了解您購 車的需求。</li>
+                        <li>簽定尋車委託書→簽定委託書並收取訂金。</li>
+                        <li>國外尋車→楷懿會依照您所需要需要之車輛配備，找尋車況良好且無事故、無調錶、車輛結構完整的車輛，亦會將車輛的相關資料、車身照片以及價格提供給您，如果您願意訂購，則另外簽訂接單合約書，反之，如果在2個星期內我們無法找尋到您的理想車輛，楷懿會將全數訂金退還給您。
+                        </li>
+                        <li>簽訂接單合約書→雙方簽定合約書後，我們會向買方收取購車訂金，接著由楷懿將您的愛車購入。</li>
+                        <li>陸運/出口→安排國外當地的陸運及相關出口手續。</li>
+                        <li>海運→安排裝船及船運日期，美國船運時間約21天，德國船運時間約35天。</li>
+                        <li>報關及關稅相關費用繳納→車輛到港後，楷懿會委託專業報關單位，處理車輛拆櫃、報關手續和相關費用繳納。</li>
+                        <li>車輛檢測安排→楷懿會將您的愛車安排至車測中心做測試，測試項目主要有汙染、噪音、燈光、耗能四大項，排測日期則以車測中心實際安排為主。</li>
+                        <li>檢測資料核可→車輛檢測後，車輛報告須上傳至各相關單位，並由承辦人員審閱核可。</li>
+                        <li>監理站領牌/交車→楷懿委託專人至監理站辦理車輛領牌之手續，則交車當日買方付清車輛尾款及相關費用後，由服務專員親自將您的愛車交付給您。</li>
+                    </ol>
+                </div>
+              </li>
+
+
+
+            </ul>
+          </div>
+
+        </div>
+      </section><!-- End Frequently Asked Questions Section -->
+
+    <section class="">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-10 mx-auto">
                     <ol>
                         <li>
                             <p>國外汽車取得流程約20天，包含車款銀行清償、title取得、內陸運輸、第三方檢測(PSI)。</p>
@@ -139,7 +176,7 @@
                     </a>
                 </div> --}}
 
-                <div class="accordion col-md-6" id="accordionExample">
+                {{-- <div class="accordion col-md-6" id="accordionExample">
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h2 class="mb-0">
@@ -222,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>
