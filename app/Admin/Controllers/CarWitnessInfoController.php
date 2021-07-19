@@ -32,6 +32,8 @@ class CarWitnessInfoController extends AdminController
             $grid->export();
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             $grid->column('witnessFrontCover')->image();
             $grid->column('title')->sortable();
@@ -72,6 +74,15 @@ class CarWitnessInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new CarWitnessInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    // $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('title');
             $show->field('witnessFrontCover')->image();
@@ -97,7 +108,7 @@ class CarWitnessInfoController extends AdminController
             $form->image('witnessFrontCover')->move('images/witness/'.date('Ym').'/frontCover')->uniqueName()->rules('mimes:jpg,jpeg,png,gif');
             $form->editor('content')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
             styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
-            table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']])->imageDirectory('editor/images')->required();
+            table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']])->imageDirectory('editor/images');
             $form->multipleImage('path')->move('images/witness/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable')->sortable();
 
             $form->display('created_at');

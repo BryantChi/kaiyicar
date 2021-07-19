@@ -24,6 +24,8 @@ class CatalogCarInfoController extends AdminController
             $grid->export();
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             // $grid->order->orderable();
             $grid->column('carName');
@@ -84,6 +86,15 @@ class CatalogCarInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new CatalogCarInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    // $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('carName');
             $show->field('carFrontCover')->image();
@@ -121,7 +132,14 @@ class CatalogCarInfoController extends AdminController
             $show->field('milage');
             $show->field('milageUnit');
             $show->field('carImageUrl')->image();
-            $show->field('carFileUrl')->file();
+            $show->field('carFileUrl')->unescape()->as(function ($files) {
+                $result = "";
+                foreach(json_decode(json_encode($files), true) as $key=>$item) {
+                    $result .= '<a href="' . config('app.url'). "/uploads/" . $item . '" target="_blank" download> '. explode("/",$item)[3] .' </a></br>' ;
+                }
+                return $result;
+
+            });
             $show->field('carDiscription')->unescape()->as(function($carDiscription) {
                 return $carDiscription;
             });

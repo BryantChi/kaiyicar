@@ -22,6 +22,10 @@ class CarModelInfoController extends AdminController
             $grid->export();
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 禁用删除按钮
+            $grid->disableDeleteButton();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             $grid->column('carTypeId')->display(function($carTypeId) {
                 $typeInfo = CarTypeInfo::find($carTypeId);
@@ -48,6 +52,15 @@ class CarModelInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new CarModelInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('carTypeId')->as(function($carTypeId) {
                 $typeInfo = CarTypeInfo::find($carTypeId);

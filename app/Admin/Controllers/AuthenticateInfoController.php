@@ -21,6 +21,8 @@ class AuthenticateInfoController extends AdminController
         return Grid::make(new AuthenticateInfo(), function (Grid $grid) {
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             $grid->column('authenticate_name')->sortable();
             $grid->column('authenticate_path')->image();
@@ -46,6 +48,15 @@ class AuthenticateInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new AuthenticateInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    // $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('authenticate_name');
             $show->field('authenticate_path')->image();

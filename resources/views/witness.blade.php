@@ -66,7 +66,7 @@
                 @foreach ($witnessInfo as $item)
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap witness-img" onclick="detail('{{ url('witnessCar/' . $item->id) }}')">
+                        <div class="portfolio-wrap witness-img" style="width: 22rem;" onclick="detail('{{ url('witnessCar/' . $item->id) }}')">
                             <img src="{{ asset('uploads/' . $item->witnessFrontCover) }}" class="img-fluid img-centered"
                                 alt="{{ $item->title }}">
                             {{-- {{ asset('upload/'.$item->carFrontCover) }} --}}
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <div>
-                            <h3>{{ $item->title }}</h3>
+                            {{-- <h3>{{ $item->title }}</h3> --}}
                             {{-- <p style="font-size: 1.5rem;">{{  date("Y-m-d",strtotime($item->created_at)) }}</p> --}}
                         </div>
                     </div>

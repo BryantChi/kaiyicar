@@ -18,7 +18,7 @@
     }
 
     .featured-img img {
-        /* max-height: 15rem !important; */
+        height: 100% !important;
     }
 
 </style>
@@ -93,7 +93,7 @@
                         </div> --}}
 
 
-                        <div class="portfolio-wrap featured-img" onclick="detail('{{ url('catalog/' . $item->id ) }}')">
+                        <div class="portfolio-wrap featured-img" style="width: 22rem;" onclick="detail('{{ url('catalog/' . $item->id ) }}')">
                             <img src="{{ asset('uploads/'.$item->carFrontCover) }}" class="img-fluid img-centered" alt="{{ $item->carName }}">
                             {{-- {{ asset('upload/'.$item->carFrontCover) }} --}}
                             {{-- https://richfulmotors.com/upload/ --}}

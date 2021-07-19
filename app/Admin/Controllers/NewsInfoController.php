@@ -20,6 +20,8 @@ class NewsInfoController extends AdminController
         return Grid::make(new NewsInfo(), function (Grid $grid) {
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             $grid->column('title');
             $grid->column('category');
@@ -44,6 +46,15 @@ class NewsInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new NewsInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    // $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('title');
             $show->field('category');

@@ -238,9 +238,13 @@
                         </li>
                         <li><strong>型號：</strong>{{ \DB::table('car_model_infos')->where('id', $catalogCarInfo->carModel)->first()->modelName }}
                         </li>
-                        <li style="{{ $catalogCarInfo->carFileUrl == '' ? 'display: none;' : '' }}">
-                            <strong>認證下載：</strong><a href="{{ url('upload/' . $catalogCarInfo->carFileUrl) }}"
-                                target="_blank" download>下載</a></li>
+                        <li style="{{ count($catalogCarInfo->carFileUrl) == 0 ? 'display: none;' : '' }}">
+                            <strong>認證下載：</strong>
+                            @foreach ($catalogCarInfo->carFileUrl as $key=>$item)
+                                <a href="{{ url('upload/' . $item) }}"
+                                    target="_blank" download>下載{{(Int)$key+1}}</a>
+                            @endforeach
+                        </li>
                     </ul>
                 </div>
 

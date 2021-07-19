@@ -21,6 +21,8 @@ class AboutUsInfoController extends AdminController
         return Grid::make(new AboutUsInfo(), function (Grid $grid) {
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             // $grid->column('id')->sortable();
             $grid->column('content')->display(function ($content) {
                 return "<p style=\"width:300px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;\">".str_replace("</p>", "",str_replace("<p>", "", $content))."</p>";
@@ -51,6 +53,15 @@ class AboutUsInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new AboutUsInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    // $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('content')->unescape();
             $show->field('created_at');

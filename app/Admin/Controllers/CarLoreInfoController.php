@@ -20,6 +20,8 @@ class CarLoreInfoController extends AdminController
         return Grid::make(new CarLoreInfo(), function (Grid $grid) {
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             $grid->column('subject');
             // $grid->column('content');
@@ -43,6 +45,15 @@ class CarLoreInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new CarLoreInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    // $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('subject');
             $show->field('content')->unescape()->as(function($carDiscription) {

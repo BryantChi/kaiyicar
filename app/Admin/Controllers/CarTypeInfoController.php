@@ -27,6 +27,10 @@ class CarTypeInfoController extends AdminController
             $grid->export();
             $grid->disableFilterButton();
             $grid->showColumnSelector();
+            // 禁用删除按钮
+            $grid->disableDeleteButton();
+            // 显示快捷编辑按钮
+            $grid->showQuickEditButton();
             $grid->column('id')->sortable();
             $grid->column('typeName');
             $grid->column('created_at');
@@ -54,6 +58,15 @@ class CarTypeInfoController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new CarTypeInfo(), function (Show $show) {
+            $show->panel()
+                ->tools(function ($tools) {
+                    // $tools->disableEdit();
+                    // $tools->disableList();
+                    $tools->disableDelete();
+                    // 显示快捷编辑按钮
+                    $tools->showQuickEdit();
+
+            });
             $show->field('id');
             $show->field('typeName');
             $show->field('created_at');
