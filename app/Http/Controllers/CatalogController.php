@@ -16,7 +16,7 @@ class CatalogController extends Controller
     public function index()
     {
         //
-        $catalogCarInfo = CatalogCarInfo::orderBy('id', 'desc')->paginate(10);
+        $catalogCarInfo = CatalogCarInfo::orderBy('updated_at', 'desc')->paginate(12);
         return view('catalog', ['catalogCarInfo' => $catalogCarInfo]);
     }
 

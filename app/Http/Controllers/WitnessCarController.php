@@ -15,7 +15,7 @@ class WitnessCarController extends Controller
     public function index(Request $request)
     {
         //
-        $info = CarWitnessInfo::orderBy('id', 'desc')->paginate(10);
+        $info = CarWitnessInfo::orderBy('updated_at', 'desc')->paginate(12);
 
         // if ($request->ajax()) {
         //     return \Response::json(\View::make('witness-items', array('witnessInfo' => $info))->render());
