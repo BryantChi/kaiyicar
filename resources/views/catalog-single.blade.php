@@ -233,7 +233,7 @@
                         <li style="{{ $catalogCarInfo->priceShow == '0' ? 'display: none;' : '' }}"><strong>價格：</strong><b
                                 style="font-size: 1.2rem;">{{ $catalogCarInfo->priceShow == '0' ? '' : ' ' . $catalogCarInfo->price . ' 萬' }}</b>
                         </li>
-                        <li><strong>年式：</strong>{{ date('Ym', strtotime($catalogCarInfo->carManufactureYear)) }}</li>
+                        <li><strong>年式：</strong>{{ $catalogCarInfo->carManufactureYear }}</li>
                         <li><strong>里程數：</strong>{{ $catalogCarInfo->milage . ' ' . ucfirst($catalogCarInfo->milageUnit) }}
                         </li>
                         <li><strong>型號：</strong>{{ \DB::table('car_model_infos')->where('id', $catalogCarInfo->carModel)->first()->modelName }}
