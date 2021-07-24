@@ -57,7 +57,7 @@
                 <hr>
             </div>
 
-            <div id="page" class="overflow-auto">
+            <div id="page" class="overflow-auto text-center">
                 {{ $witnessInfo->onEachSide(1)->links() }}
             </div>
 
@@ -87,6 +87,10 @@
 
                 @endforeach
 
+            </div>
+
+            <div id="page" class="overflow-auto text-center">
+                {{ $witnessInfo->onEachSide(1)->links() }}
             </div>
 
             {{-- <div class="" id="witness-items">

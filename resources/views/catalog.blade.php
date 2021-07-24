@@ -117,6 +117,9 @@
                     </div>
                 @endforeach
             </div>
+            <div id="page" class="overflow-auto text-center">
+                {{ $catalogCarInfo->onEachSide(1)->links() }}
+            </div>
             {{-- <div class="row mt-5">  <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
                 <div class="col text-center">
                     <div class="block-27">
