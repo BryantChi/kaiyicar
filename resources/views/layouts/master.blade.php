@@ -2,9 +2,12 @@
 <html lang="zh-TW">
 
 <head>
-    <title>Carbook - Free Bootstrap 4 Template by Colorlib</title>
+    <title>楷懿國際汽車官方網站 台南進口車 | 外匯車</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="楷懿國際汽車">
+    <meta name="description" content="楷懿國際汽車">
+    <meta name="title" content="楷懿國際汽車官方網站 台南進口車 | 外匯車">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
         rel="stylesheet">
