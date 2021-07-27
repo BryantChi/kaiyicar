@@ -15,7 +15,7 @@ class IndexController extends Controller
     public function index()
     {
         //
-        $newInfo = NewsInfo::orderBy('id', 'desc')->limit(10)->get();
+        $newInfo = NewsInfo::orderBy('updated_at', 'desc')->limit(15)->get();
         return view('index', compact('newInfo'));
     }
 
