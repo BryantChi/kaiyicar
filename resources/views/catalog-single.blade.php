@@ -280,7 +280,7 @@
                         <ul class="features">
                             @foreach ($catalogCarOptionals as $key => $item)
                                 @if ($key % 3 == 1)
-                                    <li class="check"><span class="ion-ios-checkmark"></span>{{ $item }}s</li>
+                                    <li class="check"><span class="ion-ios-checkmark"></span>{{ $item }}</li>
                                 @endif
                             @endforeach
                         </ul>
