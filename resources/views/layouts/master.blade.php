@@ -177,6 +177,9 @@
         integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
         crossorigin="anonymous" />
 
+    <!--引用SweetAlert2.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.0/sweetalert2.all.js"></script>
+
 </body>
 
 </html>

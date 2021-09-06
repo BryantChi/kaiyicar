@@ -46,5 +46,7 @@ Route::resource('/friendlink', 'FriendlinkController');
 
 Route::resource('/witnessCar', 'WitnessCarController');
 
+Route::any('/ContactUs/MailSend', 'MailController@contactMail')->name('ContactUsMail');
+
 
 
