@@ -12,7 +12,7 @@
             {{-- {{ asset('upload/'.$item->carFrontCover) }} --}}
             <div class="portfolio-info">
                 <h4>{{ $item->title }}</h4>
-                <p>{{ date("Y-m-d",strtotime($item->created_at)) }}</p>
+                {{-- <p>{{ date("Y-m-d",strtotime($item->created_at)) }}</p> --}}
                 {{-- <div class="portfolio-links">
                     <a href="{{'https://richfulmotors.com/upload/'.$item->carFrontCover}}" data-gall="portfolioGallery" class="venobox" title="{{ $item->carName }}"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
