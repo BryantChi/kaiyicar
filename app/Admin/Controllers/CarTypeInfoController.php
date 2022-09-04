@@ -36,10 +36,10 @@ class CarTypeInfoController extends AdminController
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
-            $info = $this->carTypeRepo->getAllCarTypes()::all();
-            if (count($info) >= 3) {
-                $grid->disableCreateButton();
-            }
+            // $info = $this->carTypeRepo->getAllCarTypes()::all();
+            // if (count($info) >= 3) {
+            //     $grid->disableCreateButton();
+            // }
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');

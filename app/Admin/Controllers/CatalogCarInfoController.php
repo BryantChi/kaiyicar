@@ -197,7 +197,7 @@ class CatalogCarInfoController extends AdminController
             $form->date('carManufactureYear')->format('YYYYMM')->required();
             $form->currency('price')->required();
             $form->radio('priceShow')->options([1 => '顯示', 0 => '不顯示'])->default(1)->required();
-            $form->currency('milage')->symbol('')->required();
+            $form->currency('milage')->symbol('')->default(0);
             $form->radio('milageUnit')->options(['miles' => 'miles', 'km' => 'km'])->default('miles')->required();
             $form->multipleImage('carImageUrl')->move('images/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable')->sortable();
             $form->multipleFile('carFileUrl')->move('files/certificate/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:pdf,doc,docx,txt|nullable')->sortable();
