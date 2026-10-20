@@ -56,13 +56,6 @@
     <!-- Vendor JS Files (jquery need put in head) -->
     <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
-    <!-- =======================================================
-  * Template Name: Groovin - v2.1.0
-  * Template URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
 </head>
 
 <body>
