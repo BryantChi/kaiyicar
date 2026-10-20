@@ -23,7 +23,7 @@ Route::any('/clear-cache', function () {
     Artisan::call('config:clear');
     Artisan::call('config:cache');
     Artisan::call('view:clear');
-    return "All Cache is cleared";
+    return redirect()->back()->with('success', 'All Cache is cleared');
 });
 
 Route::resource('/', 'IndexController');
